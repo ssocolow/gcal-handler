@@ -17,7 +17,8 @@ async function getCalEvents(response) {
         const data = await res.json();
         console.log("GETTING ALL CALS: ", data);
         const ids = getIDs(data);
-        let allevents = await grabEvents(10, ids);
+        NUMDAYS = document.getElementById("numDays").value;
+        let allevents = await grabEvents(NUMDAYS, ids);
         return formatAndRenderEvents(allevents);
     } catch (error) {
         console.error("Error fetching calendar events:", error);

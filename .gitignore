@@ -2,3 +2,4 @@ calendar-handler/*
 new/*
 tailwind/*
 local-gcal-handler/*
+package-lock.json
